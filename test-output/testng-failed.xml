@@ -3,16 +3,12 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="br.com.rsinet.appium.tdd.test.CadastroDeUsuarioTest">
+      <class name="br.com.rsinet.appium.tdd.test.ConsultaDeProdutoTelaPrincipalTest">
         <methods>
-          <include name="deveCadastrarUsuario"/>
-          <include name="finaliza"/>
-          <include name="criarRelatorio"/>
-          <include name="deveTentarCadastrarUsuarioJaExistente"/>
-          <include name="criaRelatorio"/>
           <include name="inicializa"/>
+          <include name="consultaProdutoTelaPrincipalEsgotado"/>
         </methods>
-      </class> <!-- br.com.rsinet.appium.tdd.test.CadastroDeUsuarioTest -->
+      </class> <!-- br.com.rsinet.appium.tdd.test.ConsultaDeProdutoTelaPrincipalTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

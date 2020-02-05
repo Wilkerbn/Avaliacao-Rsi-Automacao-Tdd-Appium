@@ -1,48 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+<testng-results skipped="0" failed="0" ignored="0" total="6" passed="6">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="30119" started-at="2020-02-05T09:10:57 BRT" finished-at="2020-02-05T09:11:28 BRT">
+  <suite name="Suite de Teste Appium" duration-ms="146283" started-at="2020-02-05T10:25:00 BRT" finished-at="2020-02-05T10:27:26 BRT">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="30119" started-at="2020-02-05T09:10:57 BRT" finished-at="2020-02-05T09:11:28 BRT">
+    <test name="Automacao utilizando TDD" duration-ms="146283" started-at="2020-02-05T10:25:00 BRT" finished-at="2020-02-05T10:27:26 BRT">
       <class name="br.com.rsinet.appium.tdd.test.ConsultaDeProdutoCampoPesquisaTest">
-        <test-method status="PASS" signature="criarRelatorio()[pri:0, instance:br.com.rsinet.appium.tdd.test.ConsultaDeProdutoCampoPesquisaTest@167fdd33]" name="criarRelatorio" is-config="true" duration-ms="82" started-at="2020-02-05T09:10:57 BRT" finished-at="2020-02-05T09:10:58 BRT">
+        <test-method status="PASS" signature="criarRelatorio()[pri:0, instance:br.com.rsinet.appium.tdd.test.ConsultaDeProdutoCampoPesquisaTest@53f65459]" name="criarRelatorio" is-config="true" duration-ms="0" started-at="2020-02-05T10:25:00 BRT" finished-at="2020-02-05T10:25:00 BRT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- criarRelatorio -->
-        <test-method status="PASS" signature="inicializa()[pri:0, instance:br.com.rsinet.appium.tdd.test.ConsultaDeProdutoCampoPesquisaTest@167fdd33]" name="inicializa" is-config="true" duration-ms="9125" started-at="2020-02-05T09:10:58 BRT" finished-at="2020-02-05T09:11:07 BRT">
+        <test-method status="PASS" signature="inicializa()[pri:0, instance:br.com.rsinet.appium.tdd.test.ConsultaDeProdutoCampoPesquisaTest@53f65459]" name="inicializa" is-config="true" duration-ms="7978" started-at="2020-02-05T10:26:25 BRT" finished-at="2020-02-05T10:26:33 BRT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- inicializa -->
-        <test-method status="PASS" signature="consultaProdutoLupa()[pri:0, instance:br.com.rsinet.appium.tdd.test.ConsultaDeProdutoCampoPesquisaTest@167fdd33]" name="consultaProdutoLupa" duration-ms="5891" started-at="2020-02-05T09:11:07 BRT" finished-at="2020-02-05T09:11:13 BRT">
+        <test-method status="PASS" signature="consultaProdutoLupa()[pri:0, instance:br.com.rsinet.appium.tdd.test.ConsultaDeProdutoCampoPesquisaTest@53f65459]" name="consultaProdutoLupa" duration-ms="6925" started-at="2020-02-05T10:26:33 BRT" finished-at="2020-02-05T10:26:40 BRT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- consultaProdutoLupa -->
-        <test-method status="PASS" signature="finaliza(org.testng.ITestResult)[pri:0, instance:br.com.rsinet.appium.tdd.test.ConsultaDeProdutoCampoPesquisaTest@167fdd33]" name="finaliza" is-config="true" duration-ms="1615" started-at="2020-02-05T09:11:13 BRT" finished-at="2020-02-05T09:11:14 BRT">
+        <test-method status="PASS" signature="finaliza(org.testng.ITestResult)[pri:0, instance:br.com.rsinet.appium.tdd.test.ConsultaDeProdutoCampoPesquisaTest@53f65459]" name="finaliza" is-config="true" duration-ms="1278" started-at="2020-02-05T10:26:40 BRT" finished-at="2020-02-05T10:26:41 BRT">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=consultaProdutoLupa status=SUCCESS method=ConsultaDeProdutoCampoPesquisaTest.consultaProdutoLupa()[pri:0, instance:br.com.rsinet.appium.tdd.test.ConsultaDeProdutoCampoPesquisaTest@167fdd33] output={null}]]]>
+                <![CDATA[[TestResult name=consultaProdutoLupa status=SUCCESS method=ConsultaDeProdutoCampoPesquisaTest.consultaProdutoLupa()[pri:0, instance:br.com.rsinet.appium.tdd.test.ConsultaDeProdutoCampoPesquisaTest@53f65459] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- finaliza -->
-        <test-method status="PASS" signature="inicializa()[pri:0, instance:br.com.rsinet.appium.tdd.test.ConsultaDeProdutoCampoPesquisaTest@167fdd33]" name="inicializa" is-config="true" duration-ms="8744" started-at="2020-02-05T09:11:14 BRT" finished-at="2020-02-05T09:11:23 BRT">
+        <test-method status="PASS" signature="inicializa()[pri:0, instance:br.com.rsinet.appium.tdd.test.ConsultaDeProdutoCampoPesquisaTest@53f65459]" name="inicializa" is-config="true" duration-ms="8655" started-at="2020-02-05T10:26:41 BRT" finished-at="2020-02-05T10:26:50 BRT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- inicializa -->
-        <test-method status="PASS" signature="consultaProdutoLupaInvalido()[pri:0, instance:br.com.rsinet.appium.tdd.test.ConsultaDeProdutoCampoPesquisaTest@167fdd33]" name="consultaProdutoLupaInvalido" duration-ms="3533" started-at="2020-02-05T09:11:23 BRT" finished-at="2020-02-05T09:11:26 BRT">
+        <test-method status="PASS" signature="consultaProdutoLupaInvalido()[pri:0, instance:br.com.rsinet.appium.tdd.test.ConsultaDeProdutoCampoPesquisaTest@53f65459]" name="consultaProdutoLupaInvalido" duration-ms="3858" started-at="2020-02-05T10:26:50 BRT" finished-at="2020-02-05T10:26:53 BRT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- consultaProdutoLupaInvalido -->
-        <test-method status="PASS" signature="finaliza(org.testng.ITestResult)[pri:0, instance:br.com.rsinet.appium.tdd.test.ConsultaDeProdutoCampoPesquisaTest@167fdd33]" name="finaliza" is-config="true" duration-ms="1102" started-at="2020-02-05T09:11:27 BRT" finished-at="2020-02-05T09:11:28 BRT">
+        <test-method status="PASS" signature="finaliza(org.testng.ITestResult)[pri:0, instance:br.com.rsinet.appium.tdd.test.ConsultaDeProdutoCampoPesquisaTest@53f65459]" name="finaliza" is-config="true" duration-ms="1018" started-at="2020-02-05T10:26:53 BRT" finished-at="2020-02-05T10:26:54 BRT">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=consultaProdutoLupaInvalido status=SUCCESS method=ConsultaDeProdutoCampoPesquisaTest.consultaProdutoLupaInvalido()[pri:0, instance:br.com.rsinet.appium.tdd.test.ConsultaDeProdutoCampoPesquisaTest@167fdd33] output={null}]]]>
+                <![CDATA[[TestResult name=consultaProdutoLupaInvalido status=SUCCESS method=ConsultaDeProdutoCampoPesquisaTest.consultaProdutoLupaInvalido()[pri:0, instance:br.com.rsinet.appium.tdd.test.ConsultaDeProdutoCampoPesquisaTest@53f65459] output={null}]]]>
               </value>
             </param>
           </params>
@@ -50,6 +50,94 @@
           </reporter-output>
         </test-method> <!-- finaliza -->
       </class> <!-- br.com.rsinet.appium.tdd.test.ConsultaDeProdutoCampoPesquisaTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      <class name="br.com.rsinet.appium.tdd.test.CadastroDeUsuarioTest">
+        <test-method status="PASS" signature="criarRelatorio()[pri:0, instance:br.com.rsinet.appium.tdd.test.CadastroDeUsuarioTest@4d95d2a2]" name="criarRelatorio" is-config="true" duration-ms="84" started-at="2020-02-05T10:25:00 BRT" finished-at="2020-02-05T10:25:00 BRT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- criarRelatorio -->
+        <test-method status="PASS" signature="inicializa()[pri:0, instance:br.com.rsinet.appium.tdd.test.CadastroDeUsuarioTest@4d95d2a2]" name="inicializa" is-config="true" duration-ms="9798" started-at="2020-02-05T10:25:00 BRT" finished-at="2020-02-05T10:25:10 BRT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- inicializa -->
+        <test-method status="PASS" signature="deveCadastrarUsuario()[pri:0, instance:br.com.rsinet.appium.tdd.test.CadastroDeUsuarioTest@4d95d2a2]" name="deveCadastrarUsuario" duration-ms="35111" started-at="2020-02-05T10:25:10 BRT" finished-at="2020-02-05T10:25:45 BRT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deveCadastrarUsuario -->
+        <test-method status="PASS" signature="finaliza(org.testng.ITestResult)[pri:0, instance:br.com.rsinet.appium.tdd.test.CadastroDeUsuarioTest@4d95d2a2]" name="finaliza" is-config="true" duration-ms="1171" started-at="2020-02-05T10:25:45 BRT" finished-at="2020-02-05T10:25:46 BRT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=deveCadastrarUsuario status=SUCCESS method=CadastroDeUsuarioTest.deveCadastrarUsuario()[pri:0, instance:br.com.rsinet.appium.tdd.test.CadastroDeUsuarioTest@4d95d2a2] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- finaliza -->
+        <test-method status="PASS" signature="inicializa()[pri:0, instance:br.com.rsinet.appium.tdd.test.CadastroDeUsuarioTest@4d95d2a2]" name="inicializa" is-config="true" duration-ms="7681" started-at="2020-02-05T10:25:46 BRT" finished-at="2020-02-05T10:25:54 BRT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- inicializa -->
+        <test-method status="PASS" signature="deveTentarCadastrarUsuarioJaExistente()[pri:0, instance:br.com.rsinet.appium.tdd.test.CadastroDeUsuarioTest@4d95d2a2]" name="deveTentarCadastrarUsuarioJaExistente" duration-ms="30177" started-at="2020-02-05T10:25:54 BRT" finished-at="2020-02-05T10:26:24 BRT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deveTentarCadastrarUsuarioJaExistente -->
+        <test-method status="PASS" signature="finaliza(org.testng.ITestResult)[pri:0, instance:br.com.rsinet.appium.tdd.test.CadastroDeUsuarioTest@4d95d2a2]" name="finaliza" is-config="true" duration-ms="837" started-at="2020-02-05T10:26:24 BRT" finished-at="2020-02-05T10:26:25 BRT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=deveTentarCadastrarUsuarioJaExistente status=SUCCESS method=CadastroDeUsuarioTest.deveTentarCadastrarUsuarioJaExistente()[pri:0, instance:br.com.rsinet.appium.tdd.test.CadastroDeUsuarioTest@4d95d2a2] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- finaliza -->
+      </class> <!-- br.com.rsinet.appium.tdd.test.CadastroDeUsuarioTest -->
+      <class name="br.com.rsinet.appium.tdd.test.ConsultaDeProdutoTelaPrincipalTest">
+        <test-method status="PASS" signature="criarRelatorio()[pri:0, instance:br.com.rsinet.appium.tdd.test.ConsultaDeProdutoTelaPrincipalTest@3b088d51]" name="criarRelatorio" is-config="true" duration-ms="1" started-at="2020-02-05T10:25:00 BRT" finished-at="2020-02-05T10:25:00 BRT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- criarRelatorio -->
+        <test-method status="PASS" signature="inicializa()[pri:0, instance:br.com.rsinet.appium.tdd.test.ConsultaDeProdutoTelaPrincipalTest@3b088d51]" name="inicializa" is-config="true" duration-ms="8722" started-at="2020-02-05T10:26:54 BRT" finished-at="2020-02-05T10:27:03 BRT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- inicializa -->
+        <test-method status="PASS" signature="consultaProdutoTelaPrincipal()[pri:0, instance:br.com.rsinet.appium.tdd.test.ConsultaDeProdutoTelaPrincipalTest@3b088d51]" name="consultaProdutoTelaPrincipal" duration-ms="5712" started-at="2020-02-05T10:27:03 BRT" finished-at="2020-02-05T10:27:09 BRT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- consultaProdutoTelaPrincipal -->
+        <test-method status="PASS" signature="finaliza(org.testng.ITestResult)[pri:0, instance:br.com.rsinet.appium.tdd.test.ConsultaDeProdutoTelaPrincipalTest@3b088d51]" name="finaliza" is-config="true" duration-ms="1743" started-at="2020-02-05T10:27:09 BRT" finished-at="2020-02-05T10:27:11 BRT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=consultaProdutoTelaPrincipal status=SUCCESS method=ConsultaDeProdutoTelaPrincipalTest.consultaProdutoTelaPrincipal()[pri:0, instance:br.com.rsinet.appium.tdd.test.ConsultaDeProdutoTelaPrincipalTest@3b088d51] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- finaliza -->
+        <test-method status="PASS" signature="inicializa()[pri:0, instance:br.com.rsinet.appium.tdd.test.ConsultaDeProdutoTelaPrincipalTest@3b088d51]" name="inicializa" is-config="true" duration-ms="8916" started-at="2020-02-05T10:27:11 BRT" finished-at="2020-02-05T10:27:20 BRT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- inicializa -->
+        <test-method status="PASS" signature="consultaProdutoTelaPrincipalEsgotado()[pri:0, instance:br.com.rsinet.appium.tdd.test.ConsultaDeProdutoTelaPrincipalTest@3b088d51]" name="consultaProdutoTelaPrincipalEsgotado" duration-ms="5292" started-at="2020-02-05T10:27:20 BRT" finished-at="2020-02-05T10:27:25 BRT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- consultaProdutoTelaPrincipalEsgotado -->
+        <test-method status="PASS" signature="finaliza(org.testng.ITestResult)[pri:0, instance:br.com.rsinet.appium.tdd.test.ConsultaDeProdutoTelaPrincipalTest@3b088d51]" name="finaliza" is-config="true" duration-ms="1285" started-at="2020-02-05T10:27:25 BRT" finished-at="2020-02-05T10:27:26 BRT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=consultaProdutoTelaPrincipalEsgotado status=SUCCESS method=ConsultaDeProdutoTelaPrincipalTest.consultaProdutoTelaPrincipalEsgotado()[pri:0, instance:br.com.rsinet.appium.tdd.test.ConsultaDeProdutoTelaPrincipalTest@3b088d51] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- finaliza -->
+      </class> <!-- br.com.rsinet.appium.tdd.test.ConsultaDeProdutoTelaPrincipalTest -->
+    </test> <!-- Automacao utilizando TDD -->
+  </suite> <!-- Suite de Teste Appium -->
 </testng-results>

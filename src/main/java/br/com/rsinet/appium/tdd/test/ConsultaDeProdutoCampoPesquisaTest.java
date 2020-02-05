@@ -56,7 +56,6 @@ public class ConsultaDeProdutoCampoPesquisaTest {
 		HomePage.campoDePesquisa().sendKeys("Video Game");
 		HomePage.lupaParaPesquisarProdutoInserido().click();
 		Assert.assertTrue(ProdutoPage.confirmaProdutoInvalidoSelecionado().contains("No results for"));
-		System.out.println(ProdutoPage.confirmaProdutoInvalidoSelecionado());
 	}
 	
 	@AfterMethod

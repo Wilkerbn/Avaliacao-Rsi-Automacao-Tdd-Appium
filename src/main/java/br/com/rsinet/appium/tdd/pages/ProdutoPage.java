@@ -23,6 +23,12 @@ public class ProdutoPage {
 		return produtoInvalidoSelecionado;
 	}
 	
+	public static String confirmaProdutoEsgotado() {
+		WebElement campoProdutoEsgotado = getDriver().findElementByXPath("//*[@text='SOLD OUT']");
+		String textoProdutoEsgotado = campoProdutoEsgotado.getText();
+		return textoProdutoEsgotado;
+	}
+	
 	
 
 }

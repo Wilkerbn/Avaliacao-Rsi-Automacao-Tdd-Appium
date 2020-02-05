@@ -36,6 +36,10 @@ public class HomePage {
 		return elemento;
 	}
 
+	public static WebElement categoriaDeProdutosTelaPrincipal(String categoria) {
+		elemento = getDriver().findElementByXPath("//*[@text='"+ categoria +"']");
+		return elemento;
+	}
 	
 
 	
