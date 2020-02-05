@@ -1,35 +1,68 @@
 package br.com.rsinet.appium.tdd.test;
 
-import java.net.MalformedURLException;
-import java.net.URL;
+import java.io.IOException;
 
-import org.junit.Test;
-import org.openqa.selenium.remote.DesiredCapabilities;
+import org.testng.Assert;
+import org.testng.ITestResult;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
 
-import io.appium.java_client.MobileDriver;
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+
+import br.com.rsinet.appium.tdd.pages.HomePage;
+import br.com.rsinet.appium.tdd.pages.ProdutoPage;
+import br.com.rsinet.appium.tdd.suport.DriverFactory;
+import br.com.rsinet.appium.tdd.utility.Constant;
+import br.com.rsinet.appium.tdd.utility.Report;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
-import io.appium.java_client.remote.MobileCapabilityType;
 
 public class ConsultaDeProdutoCampoPesquisaTest {
 	
+	public static AndroidDriver<MobileElement> driver;
+	public ExtentTest test;
+	public ExtentReports extent;
+	
+	@BeforeMethod
+	public void inicializa() throws Exception {
+		driver = DriverFactory.getDriver();
+		Constant.recebeDadosDoExcel("Produtos");
+
+	}
+	
+	@BeforeTest
+	public void criarRelatorio() {
+		extent = Report.setExtent();
+	}
 
 	@Test
-	public void consultaProdutoValidoLupa() throws MalformedURLException, Exception {
-		DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
-		desiredCapabilities.setCapability("platformName", "Android");
-	    desiredCapabilities.setCapability("deviceName", "2a32194acc16");
-//	    desiredCapabilities.setCapability("automationName", "uiautomator2");
-//	    desiredCapabilities.setCapability("appPackage", "com.Advantage.aShopping");
-//	    desiredCapabilities.setCapability("appActivity", "com.Advantage.aShopping.SplashActivity");
-	    //desiredCapabilities.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, "60");
-	    desiredCapabilities.setCapability(MobileCapabilityType.APP, "C:\\Users\\wilker.nogueira\\eclipse-workspace-automacao\\appium-advantage\\src\\main\\resources\\apk\\Advantage+demo+2_0.apk");
-	    
-
-	AndroidDriver<MobileElement> driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), desiredCapabilities);
+	public void consultaProdutoLupa() throws Exception  {
+		test = Report.setUp("consultaProdutoLupa");
+		
+		HomePage.campoDePesquisa().sendKeys("LAPTOPS");
+		HomePage.lupaParaPesquisarProdutoInserido().click();
+		ProdutoPage.selecionaProduto("HP PAVILION 15T TOUCH LAPTOP").click();
+		Assert.assertEquals("HP PAVILION 15T TOUCH LAPTOP", ProdutoPage.confirmaProdutoSelecionado("HP PAVILION 15T TOUCH LAPTOP"));
 	
+	}
 	
-	Thread.sleep(2000);
-	driver.findElementById("com.Advantage.aShopping:id/imageViewMenu").click();
+	@Test
+	public void consultaProdutoLupaInvalido() throws Exception  {
+		test = Report.setUp("consultaProdutoLupaInvalido");
+		
+		HomePage.campoDePesquisa().sendKeys("Video Game");
+		HomePage.lupaParaPesquisarProdutoInserido().click();
+		Assert.assertTrue(ProdutoPage.confirmaProdutoInvalidoSelecionado().contains("No results for"));
+		System.out.println(ProdutoPage.confirmaProdutoInvalidoSelecionado());
+	}
+	
+	@AfterMethod
+	public void finaliza(ITestResult result) throws IOException {
+		Report.tearDown(result, test);
+		Report.closeReport(extent);
+		DriverFactory.killDriver();
 	}
 }
