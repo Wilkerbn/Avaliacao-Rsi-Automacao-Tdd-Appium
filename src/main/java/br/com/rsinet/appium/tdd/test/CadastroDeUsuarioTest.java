@@ -12,6 +12,7 @@ import org.testng.annotations.Test;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 
+import br.com.rsinet.appium.tdd.pages.BasePage;
 import br.com.rsinet.appium.tdd.pages.FormularioPage;
 import br.com.rsinet.appium.tdd.pages.HomePage;
 import br.com.rsinet.appium.tdd.pages.LoginPage;
@@ -31,7 +32,6 @@ public class CadastroDeUsuarioTest {
 	public void inicializa() throws Exception {
 		driver = DriverFactory.getDriver();
 		Constant.recebeDadosDoExcel("Cadastro");
-
 	}
 
 	@BeforeTest
@@ -58,7 +58,7 @@ public class CadastroDeUsuarioTest {
 		FormularioPage.campoNome().sendKeys(Constant.primeiroNome());
 		FormularioPage.campoUltimoNome().click();
 		FormularioPage.campoUltimoNome().sendKeys(Constant.ultimoNome());
-		FormularioPage.scrollNoForm();
+		BasePage.scrollDown(0.8, 0.2);
 		FormularioPage.campoTelefone().click();
 		FormularioPage.campoTelefone().sendKeys(Constant.telefone());
 		FormularioPage.campoPais().click();
@@ -95,7 +95,7 @@ public class CadastroDeUsuarioTest {
 		FormularioPage.campoNome().sendKeys(Constant.primeiroNome());
 		FormularioPage.campoUltimoNome().click();
 		FormularioPage.campoUltimoNome().sendKeys(Constant.ultimoNome());
-		FormularioPage.scrollNoForm();
+		BasePage.scrollDown(0.8, 0.2);
 		FormularioPage.campoTelefone().click();
 		FormularioPage.campoTelefone().sendKeys(Constant.telefone());
 		FormularioPage.campoPais().click();

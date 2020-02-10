@@ -10,7 +10,7 @@ import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.touch.offset.PointOption;
 
-public class FormularioPage {
+public class FormularioPage extends BasePage{
 	
 	private static WebElement elemento = null;
 	
@@ -42,12 +42,6 @@ public class FormularioPage {
 	public static WebElement campoUltimoNome() {
 		elemento = getDriver().findElementByXPath("//android.view.ViewGroup[@content-desc=\"Home Page\"]/android.widget.LinearLayout[2]/android.widget.ScrollView/android.widget.LinearLayout/android.widget.LinearLayout[2]/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.RelativeLayout[2]/android.widget.EditText\r\n");
 		return elemento;
-	}
-	
-	public static TouchAction scrollNoForm() {
-		TouchAction scroll = new TouchAction(getDriver());
-		scroll.press(PointOption.point(1059, 1698)).moveTo(PointOption.point(1059, 300)).perform();
-		return scroll;
 	}
 	
 	public static WebElement campoTelefone() {

@@ -2,18 +2,20 @@ package br.com.rsinet.appium.tdd.pages;
 
 import static br.com.rsinet.appium.tdd.suport.DriverFactory.getDriver;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import io.appium.java_client.MobileElement;
 
 public class HomePage {
 	private static WebElement elemento = null;
 	
-	public static WebElement menuLateral() throws Exception {
-		Thread.sleep(5000);
-		elemento = getDriver().findElementById("com.Advantage.aShopping:id/imageViewMenu");
-		return elemento;
-	}
+	public static MobileElement menuLateral() {
+		WebDriverWait wait = new WebDriverWait(getDriver(), 20);
+        return (MobileElement) wait.until(ExpectedConditions.elementToBeClickable(By.id("com.Advantage.aShopping:id/imageViewMenu")));
+    }
 
 	public static WebElement botaoLogin() {
 		elemento = getDriver().findElementById("com.Advantage.aShopping:id/linearLayoutLogin");
