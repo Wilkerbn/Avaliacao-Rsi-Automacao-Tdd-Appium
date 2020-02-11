@@ -12,8 +12,8 @@ import org.testng.annotations.Test;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 
-import br.com.rsinet.appium.tdd.pages.HomePage;
-import br.com.rsinet.appium.tdd.pages.ProdutoPage;
+import br.com.rsinet.appium.tdd.screens.HomeScreen;
+import br.com.rsinet.appium.tdd.screens.ProdutoScreen;
 import br.com.rsinet.appium.tdd.suport.DriverFactory;
 import br.com.rsinet.appium.tdd.utility.Constant;
 import br.com.rsinet.appium.tdd.utility.Report;
@@ -22,9 +22,9 @@ import io.appium.java_client.android.AndroidDriver;
 
 public class ConsultaDeProdutoCampoPesquisaTest {
 	
-	public static AndroidDriver<MobileElement> driver;
-	public ExtentTest test;
-	public ExtentReports extent;
+	private static AndroidDriver<MobileElement> driver;
+	private ExtentTest test;
+	private ExtentReports extent;
 	
 	@BeforeMethod
 	public void inicializa() throws Exception {
@@ -42,10 +42,10 @@ public class ConsultaDeProdutoCampoPesquisaTest {
 	public void consultaProdutoLupa() throws Exception  {
 		test = Report.setUp("consultaProdutoLupa");
 		
-		HomePage.campoDePesquisa().sendKeys("LAPTOPS");
-		HomePage.lupaParaPesquisarProdutoInserido().click();
-		ProdutoPage.selecionaProduto("HP PAVILION 15T TOUCH LAPTOP").click();
-		Assert.assertEquals("HP PAVILION 15T TOUCH LAPTOP", ProdutoPage.confirmaProdutoSelecionado("HP PAVILION 15T TOUCH LAPTOP"));
+		HomeScreen.campoDePesquisa().sendKeys("LAPTOPS");
+		HomeScreen.lupaParaPesquisarProdutoInserido().click();
+		ProdutoScreen.selecionaProduto("HP PAVILION 15T TOUCH LAPTOP").click();
+		Assert.assertEquals("HP PAVILION 15T TOUCH LAPTOP", ProdutoScreen.confirmaProdutoSelecionado("HP PAVILION 15T TOUCH LAPTOP"));
 	
 	}
 	
@@ -53,9 +53,9 @@ public class ConsultaDeProdutoCampoPesquisaTest {
 	public void consultaProdutoLupaInvalido() throws Exception  {
 		test = Report.setUp("consultaProdutoLupaInvalido");
 		
-		HomePage.campoDePesquisa().sendKeys("Video Game");
-		HomePage.lupaParaPesquisarProdutoInserido().click();
-		Assert.assertTrue(ProdutoPage.confirmaProdutoInvalidoSelecionado().contains("No results for"));
+		HomeScreen.campoDePesquisa().sendKeys("Video Game");
+		HomeScreen.lupaParaPesquisarProdutoInserido().click();
+		Assert.assertTrue(ProdutoScreen.confirmaProdutoInvalidoSelecionado().contains("No results for"));
 	}
 	
 	@AfterMethod

@@ -1,9 +1,9 @@
-package br.com.rsinet.appium.tdd.pages;
+package br.com.rsinet.appium.tdd.screens;
 
 import org.openqa.selenium.WebElement;
 import static br.com.rsinet.appium.tdd.suport.DriverFactory.getDriver;
 
-public class ProdutoPage {
+public class ProdutoScreen {
 	private static WebElement elemento = null;
 	
 	public static WebElement selecionaProduto(String texto) {

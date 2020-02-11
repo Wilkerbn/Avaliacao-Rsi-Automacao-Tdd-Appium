@@ -1,10 +1,10 @@
-package br.com.rsinet.appium.tdd.pages;
+package br.com.rsinet.appium.tdd.screens;
 
 import static br.com.rsinet.appium.tdd.suport.DriverFactory.getDriver;
 
 import org.openqa.selenium.WebElement;
 
-public class LoginPage {
+public class LoginScreen {
 	
 	private static WebElement elemento = null;
 	

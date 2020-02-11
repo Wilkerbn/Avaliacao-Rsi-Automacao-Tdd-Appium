@@ -1,4 +1,4 @@
-package br.com.rsinet.appium.tdd.pages;
+package br.com.rsinet.appium.tdd.screens;
 import static br.com.rsinet.appium.tdd.suport.DriverFactory.getDriver;
 
 import org.openqa.selenium.Dimension;
@@ -6,7 +6,7 @@ import org.openqa.selenium.Dimension;
 import io.appium.java_client.TouchAction;
 import io.appium.java_client.touch.offset.PointOption;
 
-public class BasePage{
+public class BaseScreen{
 	
 	public static void scrollDown(double inicio, double fim) {
 	       

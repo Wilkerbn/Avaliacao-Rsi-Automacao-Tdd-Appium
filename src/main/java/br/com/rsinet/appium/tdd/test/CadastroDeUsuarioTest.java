@@ -12,10 +12,10 @@ import org.testng.annotations.Test;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 
-import br.com.rsinet.appium.tdd.pages.BasePage;
-import br.com.rsinet.appium.tdd.pages.FormularioPage;
-import br.com.rsinet.appium.tdd.pages.HomePage;
-import br.com.rsinet.appium.tdd.pages.LoginPage;
+import br.com.rsinet.appium.tdd.screens.BaseScreen;
+import br.com.rsinet.appium.tdd.screens.FormularioScreen;
+import br.com.rsinet.appium.tdd.screens.HomeScreen;
+import br.com.rsinet.appium.tdd.screens.LoginScreen;
 import br.com.rsinet.appium.tdd.suport.DriverFactory;
 import br.com.rsinet.appium.tdd.utility.Constant;
 import br.com.rsinet.appium.tdd.utility.Report;
@@ -24,9 +24,9 @@ import io.appium.java_client.android.AndroidDriver;
 
 public class CadastroDeUsuarioTest {
 
-	public static AndroidDriver<MobileElement> driver;
-	public ExtentTest test;
-	public ExtentReports extent;
+	private static AndroidDriver<MobileElement> driver;
+	private ExtentTest test;
+	private ExtentReports extent;
 
 	@BeforeMethod
 	public void inicializa() throws Exception {
@@ -43,73 +43,73 @@ public class CadastroDeUsuarioTest {
 	public void deveCadastrarUsuario() throws Exception {
 		test = Report.setUp("deveCadastrarUsuario");
 
-		HomePage.menuLateral().click();
-		HomePage.botaoLogin().click();
-		LoginPage.botaoCriarNovaConta().click();
-		FormularioPage.campoApelido().click();
-		FormularioPage.campoApelido().sendKeys(Constant.apelido());
-		FormularioPage.campoEmail().click();
-		FormularioPage.campoEmail().sendKeys(Constant.email());
-		FormularioPage.campoSenha().click();
-		FormularioPage.campoSenha().sendKeys(Constant.senha());
-		FormularioPage.campoConfirmaSenha().click();
-		FormularioPage.campoConfirmaSenha().sendKeys(Constant.confirmaSenha());
-		FormularioPage.campoNome().click();
-		FormularioPage.campoNome().sendKeys(Constant.primeiroNome());
-		FormularioPage.campoUltimoNome().click();
-		FormularioPage.campoUltimoNome().sendKeys(Constant.ultimoNome());
-		BasePage.scrollDown(0.8, 0.2);
-		FormularioPage.campoTelefone().click();
-		FormularioPage.campoTelefone().sendKeys(Constant.telefone());
-		FormularioPage.campoPais().click();
-		FormularioPage.selecionaPais(driver, Constant.pais());
-		FormularioPage.campoEstado().click();
-		FormularioPage.campoEstado().sendKeys(Constant.estado());
-		FormularioPage.campoEndereco().click();
-		FormularioPage.campoEndereco().sendKeys(Constant.endereco());
-		FormularioPage.campoCidade().click();
-		FormularioPage.campoCidade().sendKeys(Constant.cidade());
-		FormularioPage.campoCep().click();
-		FormularioPage.campoCep().sendKeys(Constant.cep());
-		FormularioPage.botaoParaRegistrar().click();
-		HomePage.menuLateral().click();
-		Assert.assertEquals(Constant.apelido(), HomePage.usuarioCadastrado());
+		HomeScreen.menuLateral().click();
+		HomeScreen.botaoLogin().click();
+		LoginScreen.botaoCriarNovaConta().click();
+		FormularioScreen.campoApelido().click();
+		FormularioScreen.campoApelido().sendKeys(Constant.apelido());
+		FormularioScreen.campoEmail().click();
+		FormularioScreen.campoEmail().sendKeys(Constant.email());
+		FormularioScreen.campoSenha().click();
+		FormularioScreen.campoSenha().sendKeys(Constant.senha());
+		FormularioScreen.campoConfirmaSenha().click();
+		FormularioScreen.campoConfirmaSenha().sendKeys(Constant.confirmaSenha());
+		FormularioScreen.campoNome().click();
+		FormularioScreen.campoNome().sendKeys(Constant.primeiroNome());
+		FormularioScreen.campoUltimoNome().click();
+		FormularioScreen.campoUltimoNome().sendKeys(Constant.ultimoNome());
+		BaseScreen.scrollDown(0.8, 0.2);
+		FormularioScreen.campoTelefone().click();
+		FormularioScreen.campoTelefone().sendKeys(Constant.telefone());
+		FormularioScreen.campoPais().click();
+		FormularioScreen.selecionaPais(driver, Constant.pais());
+		FormularioScreen.campoEstado().click();
+		FormularioScreen.campoEstado().sendKeys(Constant.estado());
+		FormularioScreen.campoEndereco().click();
+		FormularioScreen.campoEndereco().sendKeys(Constant.endereco());
+		FormularioScreen.campoCidade().click();
+		FormularioScreen.campoCidade().sendKeys(Constant.cidade());
+		FormularioScreen.campoCep().click();
+		FormularioScreen.campoCep().sendKeys(Constant.cep());
+		FormularioScreen.botaoParaRegistrar().click();
+		HomeScreen.menuLateral().click();
+		Assert.assertEquals(Constant.apelido(), HomeScreen.usuarioCadastrado());
 	}
 
 	@Test
 	public void deveTentarCadastrarUsuarioJaExistente() throws Exception {
 		test = Report.setUp("deveTentarCadastrarUsuarioJaExistente");
 
-		HomePage.menuLateral().click();
-		HomePage.botaoLogin().click();
-		LoginPage.botaoCriarNovaConta().click();
-		FormularioPage.campoApelido().click();
-		FormularioPage.campoApelido().sendKeys(Constant.apelido());
-		FormularioPage.campoEmail().click();
-		FormularioPage.campoEmail().sendKeys(Constant.email());
-		FormularioPage.campoSenha().click();
-		FormularioPage.campoSenha().sendKeys(Constant.senha());
-		FormularioPage.campoConfirmaSenha().click();
-		FormularioPage.campoConfirmaSenha().sendKeys(Constant.confirmaSenha());
-		FormularioPage.campoNome().click();
-		FormularioPage.campoNome().sendKeys(Constant.primeiroNome());
-		FormularioPage.campoUltimoNome().click();
-		FormularioPage.campoUltimoNome().sendKeys(Constant.ultimoNome());
-		BasePage.scrollDown(0.8, 0.2);
-		FormularioPage.campoTelefone().click();
-		FormularioPage.campoTelefone().sendKeys(Constant.telefone());
-		FormularioPage.campoPais().click();
-		FormularioPage.selecionaPais(driver, Constant.pais());
-		FormularioPage.campoEstado().click();
-		FormularioPage.campoEstado().sendKeys(Constant.estado());
-		FormularioPage.campoEndereco().click();
-		FormularioPage.campoEndereco().sendKeys(Constant.endereco());
-		FormularioPage.campoCidade().click();
-		FormularioPage.campoCidade().sendKeys(Constant.cidade());
-		FormularioPage.campoCep().click();
-		FormularioPage.campoCep().sendKeys(Constant.cep());
-		FormularioPage.botaoParaRegistrar().click();
-		Assert.assertEquals(Constant.usuarioJaExistente(), FormularioPage.usuarioJaExiste());
+		HomeScreen.menuLateral().click();
+		HomeScreen.botaoLogin().click();
+		LoginScreen.botaoCriarNovaConta().click();
+		FormularioScreen.campoApelido().click();
+		FormularioScreen.campoApelido().sendKeys(Constant.apelido());
+		FormularioScreen.campoEmail().click();
+		FormularioScreen.campoEmail().sendKeys(Constant.email());
+		FormularioScreen.campoSenha().click();
+		FormularioScreen.campoSenha().sendKeys(Constant.senha());
+		FormularioScreen.campoConfirmaSenha().click();
+		FormularioScreen.campoConfirmaSenha().sendKeys(Constant.confirmaSenha());
+		FormularioScreen.campoNome().click();
+		FormularioScreen.campoNome().sendKeys(Constant.primeiroNome());
+		FormularioScreen.campoUltimoNome().click();
+		FormularioScreen.campoUltimoNome().sendKeys(Constant.ultimoNome());
+		BaseScreen.scrollDown(0.8, 0.2);
+		FormularioScreen.campoTelefone().click();
+		FormularioScreen.campoTelefone().sendKeys(Constant.telefone());
+		FormularioScreen.campoPais().click();
+		FormularioScreen.selecionaPais(driver, Constant.pais());
+		FormularioScreen.campoEstado().click();
+		FormularioScreen.campoEstado().sendKeys(Constant.estado());
+		FormularioScreen.campoEndereco().click();
+		FormularioScreen.campoEndereco().sendKeys(Constant.endereco());
+		FormularioScreen.campoCidade().click();
+		FormularioScreen.campoCidade().sendKeys(Constant.cidade());
+		FormularioScreen.campoCep().click();
+		FormularioScreen.campoCep().sendKeys(Constant.cep());
+		FormularioScreen.botaoParaRegistrar().click();
+		Assert.assertEquals(Constant.usuarioJaExistente(), FormularioScreen.usuarioJaExiste());
 
 	}
 	

@@ -12,8 +12,8 @@ import org.testng.annotations.Test;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 
-import br.com.rsinet.appium.tdd.pages.HomePage;
-import br.com.rsinet.appium.tdd.pages.ProdutoPage;
+import br.com.rsinet.appium.tdd.screens.HomeScreen;
+import br.com.rsinet.appium.tdd.screens.ProdutoScreen;
 import br.com.rsinet.appium.tdd.suport.DriverFactory;
 import br.com.rsinet.appium.tdd.utility.Constant;
 import br.com.rsinet.appium.tdd.utility.Report;
@@ -21,9 +21,10 @@ import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 
 public class ConsultaDeProdutoTelaPrincipalTest {
-	public static AndroidDriver<MobileElement> driver;
-	public ExtentTest test;
-	public ExtentReports extent;
+	
+	private static AndroidDriver<MobileElement> driver;
+	private ExtentTest test;
+	private ExtentReports extent;
 	
 	@BeforeMethod
 	public void inicializa() throws Exception {
@@ -40,18 +41,18 @@ public class ConsultaDeProdutoTelaPrincipalTest {
 	public void consultaProdutoTelaPrincipal() {
 		test = Report.setUp("consultaProdutoTelaPrincipal");
 		
-		HomePage.categoriaDeProdutosTelaPrincipal("LAPTOPS").click();
-		ProdutoPage.selecionaProduto("HP CHROMEBOOK 14 G1(ES)").click();
-		Assert.assertEquals("HP CHROMEBOOK 14 G1(ES)", ProdutoPage.confirmaProdutoSelecionado("HP CHROMEBOOK 14 G1(ES)"));
+		HomeScreen.categoriaDeProdutosTelaPrincipal("LAPTOPS").click();
+		ProdutoScreen.selecionaProduto("HP CHROMEBOOK 14 G1(ES)").click();
+		Assert.assertEquals("HP CHROMEBOOK 14 G1(ES)", ProdutoScreen.confirmaProdutoSelecionado("HP CHROMEBOOK 14 G1(ES)"));
 	}
 	
 	@Test
 	public void consultaProdutoTelaPrincipalEsgotado() {
 		test = Report.setUp("consultaProdutoTelaPrincipalEsgotado");
 		
-		HomePage.categoriaDeProdutosTelaPrincipal("HEADPHONES").click();
-		ProdutoPage.selecionaProduto("BOSE SOUNDLINK AROUND-EAR WIRELESS HEADPHONES II").click();
-		Assert.assertTrue(ProdutoPage.confirmaProdutoEsgotado().contains("SOLD OUT"));		
+		HomeScreen.categoriaDeProdutosTelaPrincipal("HEADPHONES").click();
+		ProdutoScreen.selecionaProduto("BOSE SOUNDLINK AROUND-EAR WIRELESS HEADPHONES II").click();
+		Assert.assertTrue(ProdutoScreen.confirmaProdutoEsgotado().contains("SOLD OUT"));		
 	}
 	
 	
