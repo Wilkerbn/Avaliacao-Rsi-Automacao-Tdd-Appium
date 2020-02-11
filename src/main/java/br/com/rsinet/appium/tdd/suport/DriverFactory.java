@@ -27,7 +27,6 @@ public class DriverFactory  {
 		DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
 		desiredCapabilities.setCapability("platformName", "Android");
 		desiredCapabilities.setCapability("deviceName", "emulator-5554");
-//		desiredCapabilities.setCapability("platformName", "Android");
 //		desiredCapabilities.setCapability("deviceName", "2a32194acc16");
 //		desiredCapabilities.setCapability("automationName", "uiautomator2");
 		desiredCapabilities.setCapability("appPackage", "com.Advantage.aShopping");

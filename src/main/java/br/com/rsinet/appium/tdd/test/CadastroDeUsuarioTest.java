@@ -58,7 +58,7 @@ public class CadastroDeUsuarioTest {
 		FormularioScreen.campoNome().sendKeys(Constant.primeiroNome());
 		FormularioScreen.campoUltimoNome().click();
 		FormularioScreen.campoUltimoNome().sendKeys(Constant.ultimoNome());
-		BaseScreen.scrollDown(0.8, 0.2);
+		BaseScreen.scrollDown(0.9, 0.1);
 		FormularioScreen.campoTelefone().click();
 		FormularioScreen.campoTelefone().sendKeys(Constant.telefone());
 		FormularioScreen.campoPais().click();
