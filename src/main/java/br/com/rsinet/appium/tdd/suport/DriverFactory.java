@@ -21,7 +21,6 @@ public class DriverFactory  {
 		}
 		return driver;
 	}
-
 	
 	private static void createDriver() {
 		DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
@@ -50,5 +49,4 @@ public class DriverFactory  {
 			driver = null;
 		}
 	}
-
 }

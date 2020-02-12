@@ -19,18 +19,15 @@ import br.com.rsinet.appium.tdd.screens.LoginScreen;
 import br.com.rsinet.appium.tdd.suport.DriverFactory;
 import br.com.rsinet.appium.tdd.utility.Constant;
 import br.com.rsinet.appium.tdd.utility.Report;
-import io.appium.java_client.MobileElement;
-import io.appium.java_client.android.AndroidDriver;
 
 public class CadastroDeUsuarioTest {
-
-	private static AndroidDriver<MobileElement> driver;
+	
 	private ExtentTest test;
 	private ExtentReports extent;
 
 	@BeforeMethod
 	public void inicializa() throws Exception {
-		driver = DriverFactory.getDriver();
+		DriverFactory.getDriver();
 		Constant.recebeDadosDoExcel("Cadastro");
 	}
 
@@ -62,7 +59,7 @@ public class CadastroDeUsuarioTest {
 		FormularioScreen.campoTelefone().click();
 		FormularioScreen.campoTelefone().sendKeys(Constant.telefone());
 		FormularioScreen.campoPais().click();
-		FormularioScreen.selecionaPais(driver, Constant.pais());
+		FormularioScreen.selecionaPais(Constant.pais());
 		FormularioScreen.campoEstado().click();
 		FormularioScreen.campoEstado().sendKeys(Constant.estado());
 		FormularioScreen.campoEndereco().click();
@@ -99,7 +96,7 @@ public class CadastroDeUsuarioTest {
 		FormularioScreen.campoTelefone().click();
 		FormularioScreen.campoTelefone().sendKeys(Constant.telefone());
 		FormularioScreen.campoPais().click();
-		FormularioScreen.selecionaPais(driver, Constant.pais());
+		FormularioScreen.selecionaPais(Constant.pais());
 		FormularioScreen.campoEstado().click();
 		FormularioScreen.campoEstado().sendKeys(Constant.estado());
 		FormularioScreen.campoEndereco().click();
@@ -110,7 +107,6 @@ public class CadastroDeUsuarioTest {
 		FormularioScreen.campoCep().sendKeys(Constant.cep());
 		FormularioScreen.botaoParaRegistrar().click();
 		Assert.assertEquals(Constant.usuarioJaExistente(), FormularioScreen.usuarioJaExiste());
-
 	}
 	
 	@AfterMethod
@@ -119,5 +115,4 @@ public class CadastroDeUsuarioTest {
 		Report.closeReport(extent);
 		DriverFactory.killDriver();
 	}
-
 }

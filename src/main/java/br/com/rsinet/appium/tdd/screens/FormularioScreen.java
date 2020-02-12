@@ -2,13 +2,7 @@ package br.com.rsinet.appium.tdd.screens;
 
 import static br.com.rsinet.appium.tdd.suport.DriverFactory.getDriver;
 
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-
-import io.appium.java_client.MobileElement;
-import io.appium.java_client.TouchAction;
-import io.appium.java_client.android.AndroidDriver;
-import io.appium.java_client.touch.offset.PointOption;
 
 public class FormularioScreen extends BaseScreen{
 	
@@ -54,8 +48,8 @@ public class FormularioScreen extends BaseScreen{
 		return elemento;
 	}
 	
-	public static void selecionaPais(AndroidDriver driver, String visibleText) {
-		driver.findElementByAndroidUIAutomator("new UiScrollable(new UiSelector().scrollable(true).instance(0)).scrollIntoView(new UiSelector().textContains(\""+ visibleText + "\").instance(0))").click();
+	public static void selecionaPais(String visibleText) {
+		getDriver().findElementByAndroidUIAutomator("new UiScrollable(new UiSelector().scrollable(true).instance(0)).scrollIntoView(new UiSelector().textContains(\""+ visibleText + "\").instance(0))").click();
 	}
 	
 	public static WebElement campoEstado() {
@@ -88,13 +82,4 @@ public class FormularioScreen extends BaseScreen{
 		String usuarioJaExiste = textoUsuarioJaExiste.getText();
 		return usuarioJaExiste;
 	}
-	
-
-	
-	
-	
-
-	
-	
-
 }

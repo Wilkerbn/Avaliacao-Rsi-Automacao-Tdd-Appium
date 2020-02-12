@@ -2,8 +2,6 @@ package br.com.rsinet.appium.tdd.utility;
 
 import java.io.IOException;
 
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.testng.ITestResult;
 
 import com.aventstack.extentreports.ExtentReports;
@@ -12,21 +10,15 @@ import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 
-import br.com.rsinet.appium.tdd.suport.DriverFactory;
 import br.com.rsinet.appium.tdd.suport.Screenshot;
-import io.appium.java_client.MobileDriver;
-import io.appium.java_client.MobileElement;
-import io.appium.java_client.android.AndroidDriver;
 
 public class Report {
-
 	
-	public static ExtentHtmlReporter htmlReporter;
-	public static ExtentReports extent;
-	public static ExtentTest test;
+	private static ExtentHtmlReporter htmlReporter;
+	private static ExtentReports extent;
+	private static ExtentTest test;
 	
 	public static ExtentReports setExtent() {
-		
 
 		htmlReporter = new ExtentHtmlReporter(System.getProperty("user.dir") + "/test-output/myReport.html");
 		htmlReporter.config().setDocumentTitle("Relatorio de Automacao"); // Titulo do report

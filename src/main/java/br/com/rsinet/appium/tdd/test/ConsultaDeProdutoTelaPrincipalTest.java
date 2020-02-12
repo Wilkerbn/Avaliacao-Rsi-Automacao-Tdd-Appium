@@ -17,18 +17,15 @@ import br.com.rsinet.appium.tdd.screens.ProdutoScreen;
 import br.com.rsinet.appium.tdd.suport.DriverFactory;
 import br.com.rsinet.appium.tdd.utility.Constant;
 import br.com.rsinet.appium.tdd.utility.Report;
-import io.appium.java_client.MobileElement;
-import io.appium.java_client.android.AndroidDriver;
 
 public class ConsultaDeProdutoTelaPrincipalTest {
 	
-	private static AndroidDriver<MobileElement> driver;
 	private ExtentTest test;
 	private ExtentReports extent;
 	
 	@BeforeMethod
 	public void inicializa() throws Exception {
-		driver = DriverFactory.getDriver();
+		DriverFactory.getDriver();
 		Constant.recebeDadosDoExcel("Produtos");
 	}
 	
@@ -55,12 +52,10 @@ public class ConsultaDeProdutoTelaPrincipalTest {
 		Assert.assertTrue(ProdutoScreen.confirmaProdutoEsgotado().contains("SOLD OUT"));		
 	}
 	
-	
 	@AfterMethod
 	public void finaliza(ITestResult result) throws IOException {
 		Report.tearDown(result, test);
 		Report.closeReport(extent);
 		DriverFactory.killDriver();
 	}
-
 }

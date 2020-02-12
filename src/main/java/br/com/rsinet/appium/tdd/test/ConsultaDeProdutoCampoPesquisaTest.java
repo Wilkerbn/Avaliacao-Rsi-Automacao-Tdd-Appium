@@ -17,20 +17,16 @@ import br.com.rsinet.appium.tdd.screens.ProdutoScreen;
 import br.com.rsinet.appium.tdd.suport.DriverFactory;
 import br.com.rsinet.appium.tdd.utility.Constant;
 import br.com.rsinet.appium.tdd.utility.Report;
-import io.appium.java_client.MobileElement;
-import io.appium.java_client.android.AndroidDriver;
 
 public class ConsultaDeProdutoCampoPesquisaTest {
-	
-	private static AndroidDriver<MobileElement> driver;
+
 	private ExtentTest test;
 	private ExtentReports extent;
 	
 	@BeforeMethod
 	public void inicializa() throws Exception {
-		driver = DriverFactory.getDriver();
+		DriverFactory.getDriver();
 		Constant.recebeDadosDoExcel("Produtos");
-
 	}
 	
 	@BeforeTest
@@ -46,7 +42,6 @@ public class ConsultaDeProdutoCampoPesquisaTest {
 		HomeScreen.lupaParaPesquisarProdutoInserido().click();
 		ProdutoScreen.selecionaProduto("HP PAVILION 15T TOUCH LAPTOP").click();
 		Assert.assertEquals("HP PAVILION 15T TOUCH LAPTOP", ProdutoScreen.confirmaProdutoSelecionado("HP PAVILION 15T TOUCH LAPTOP"));
-	
 	}
 	
 	@Test

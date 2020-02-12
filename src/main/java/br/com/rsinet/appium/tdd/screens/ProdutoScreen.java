@@ -28,7 +28,4 @@ public class ProdutoScreen {
 		String textoProdutoEsgotado = campoProdutoEsgotado.getText();
 		return textoProdutoEsgotado;
 	}
-	
-	
-
 }

@@ -1,14 +1,10 @@
 package br.com.rsinet.appium.tdd.suport;
 
+import java.io.File;
+
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebDriver;
-
-import io.appium.java_client.MobileElement;
-import io.appium.java_client.android.AndroidDriver;
-
-import java.io.File;
 
 public class Screenshot {
 	public static String tirar(String arquivo) {

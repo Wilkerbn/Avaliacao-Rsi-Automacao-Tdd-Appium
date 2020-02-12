@@ -3,8 +3,8 @@ package br.com.rsinet.appium.tdd.utility;
 public class Constant {
 	
 	/* Configuracao do caminho e arquivo Excel */
-	public static final String Path_TestData = "./src/main/java/br/com/rsinet/appium/tdd/testdata/";
-	public static final String File_TestData = "TestData.xlsx";
+	private static final String Path_TestData = "./src/main/java/br/com/rsinet/appium/tdd/testdata/";
+	private static final String File_TestData = "TestData.xlsx";
 
 	/* Metodo que recebe o arquivo do Excel e informa qual planilha contem a Massa de Dados */
 	public static void recebeDadosDoExcel(String planilha) throws Exception {
